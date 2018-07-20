@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Button from './components/common/Button';
 
 class App extends Component {
+
+  state = {
+    icon:''
+  }
+
+  
+
+  componentDidMount(){
+    this.setState({
+      icon:(<i class="fas fa-arrow-right"></i>)
+    });
+  }
+
   render() {
+
+    const { icon } = this.state
+
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Button className="post-button" name="POST" type="button" _onClick={() => alert('Hello World')} icon={icon} />
       </div>
     );
   }

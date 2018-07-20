@@ -26,3 +26,29 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+button {
+  transition: 0.3s ease-in-out;
+}
+
+.post-button{
+  background-color: #0097e6;
+  padding:15px 20px;
+  color:white;
+  border:none;
+  border-bottom-right-radius: 10px;
+  outline:none;
+}
+
+.post-button:hover{
+  background-color: #047fc0;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+.post-button i {
+  margin-left:5px;
+  color:white;
+}
