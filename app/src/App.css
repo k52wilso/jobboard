@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  padding:30px;
 }
 
 .App-logo {
@@ -52,3 +53,24 @@ button:hover{
   margin-left:5px;
   color:white;
 }
+
+.badge {
+  padding:10px 12px;
+  color:white;
+  border-radius: 50%;
+  text-shadow: 2px 2px 1px #c6c6c6;
+  box-shadow: 2px 2px 2px #c6c6c6
+}
+
+.yellow-badge{
+  background-color:#e1b12c;
+}
+
+.purple-badge{
+  background-color:#8c7ae6;
+}
+
+.blue-badge{
+  background-color:#487eb0;
+}
+

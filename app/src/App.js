@@ -22,7 +22,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Button className="post-button" name="POST" type="button" _onClick={() => alert('Hello World')} icon={icon} />
+        <span className="badge yellow-badge">{icon}</span>
+        <span className="badge purple-badge">{icon}</span>
+        <span className="badge blue-badge">{icon}</span>
       </div>
     );
   }
