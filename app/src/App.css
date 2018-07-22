@@ -28,6 +28,64 @@
   to { transform: rotate(360deg); }
 }
 
+/* Column CSS */
+
+
+.col-12{
+  width:100%;
+}
+
+.col-11 {
+  width:91.6666%;
+}
+
+.col-10 {
+  width:83.3333%;
+}
+
+.col-9 {
+  width:75%;
+}
+
+.col-8 {
+  width:66.6666%;
+}
+
+.col-7 {
+  width:58.3333%;
+}
+
+.col-6 {
+  width:50%;
+}
+
+.col-5{
+  width:41.6665%;
+}
+
+.col-4 {
+  width:33.3333%;
+}
+
+.col-3 {
+  width:25%;
+}
+
+.col-2 {
+  width:16.6666%;
+}
+
+.col-1 {
+  width:8.3333%;
+}
+
+
+
+
+
+
+/* BUTTON CSS */
+
 button {
   transition: 0.3s ease-in-out;
 }
@@ -54,6 +112,8 @@ button:hover{
   color:white;
 }
 
+/* BADGE CSS */
+
 .badge {
   padding:10px 12px;
   color:white;
@@ -74,3 +134,424 @@ button:hover{
   background-color:#487eb0;
 }
 
+/* USER IMAGE CSS */
+
+.userProfile {
+  height:auto;
+}
+
+
+.large-image{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px #c6c6c6;
+}
+
+.small-image{
+  width:30px;
+  height:30px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px #c6c6c6;
+}
+
+
+/* Navigation List CSS */
+
+.navigation-links {
+  margin:0;
+  padding:0 10px;
+  list-style: none;
+  height:auto;
+  display:inline-block;
+}
+
+.navigation-links li {
+  height:auto;
+  transition: 0.3s ease-in-out;
+  margin:5px 0;
+  padding:10px 60px;
+  border-radius:30px;
+}
+
+.navigation-links a {
+  color:#c6c6c6;
+  font-size:14px;
+  font-weight:600;
+  text-align: left;
+  display:block;
+}
+
+.active,
+.navigation-links li:hover{
+  background-color: #0097e6;
+  cursor: pointer;
+}
+
+.active {
+  box-shadow: 2px 2px 2px #c6c6c6;
+}
+
+.active a {
+  color:white;
+}
+
+.active a i {
+  color:white;
+}
+
+.navigation-links i {
+  color:#c6c6c6;
+  font-size:16px;
+  margin-right:10px;
+  text-align: left;
+}
+
+/* Panel CSS */
+.panel {
+  position:relative;
+  box-shadow: 2px 2px 20px #c6c6c6,
+              -2px 2px 20px #c6c6c6,
+              -2px 0px 20px #c6c6c6;
+  padding:10px;
+  height:auto;
+  float:left;
+  border-radius: 3px;
+}
+
+.panel .userProfile {
+  position: absolute;
+  top:20px;
+  left:-25px;
+}
+
+.panel .user-name-role p,
+.panel .user-name-role a {
+  display: inline;
+  font-weight:600;
+}
+
+.panel .user-name-role a {
+  color:#0097e6;
+  font-size:14px;
+  text-decoration: none;
+}
+
+.panel .user-name-role a:hover{
+  text-decoration: underline;
+}
+
+
+.panel .user-name-role p,
+.panel .user-name-role span {
+  color:grey;
+  font-size:12px;
+  opacity:0.6;
+}
+
+.panel .user-name-role span {
+  padding:0 5px;
+}
+
+.panel .timestamp {
+  position: absolute;
+  top:0;
+  right:10px;
+  color:grey;
+  font-size:10px;
+  font-weight:600;
+}
+
+
+
+.panel .post {
+  font-size:12px;
+  font-weight: 600;
+  color:grey;
+}
+
+/* Comments CSS */
+
+.comments {
+  width:100%;
+  margin-top:40px;
+}
+
+.comment {
+  position: relative;
+  width:90%;
+  display:block;
+  float:left;
+  padding:5px 5%;
+}
+
+
+
+.comment img{
+  float:left;
+  margin: 0px 10px 10px 0;
+}
+
+.comment a {
+  font-weight:600;
+  color:#0097e6;
+  font-size:10px;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+.comment a:hover{
+  text-decoration: underline;
+}
+
+.comment p {
+  font-size:10px;
+  color:grey;
+  text-align: left;
+  line-height: 1.5;
+}
+
+/* Reply Button CSS */
+.reply-button {
+  float:right;
+  background:transparent;
+  border-radius:20px;
+  padding:10px 30px;
+  outline:none;
+  border:2px solid #cac9c9;
+  font-weight:600;
+  color:grey;
+  font-size:12px;
+  transition: 0.3s ease-in-out;
+}
+
+.reply-button i {
+  color:grey;
+}
+
+.reply-button:hover{
+  cursor: pointer;
+  border:2px solid #0097e6;
+}
+
+/* Article in Panel CSS */
+
+.panel .article {
+  padding:20px;
+}
+
+.panel .article-photo{
+  width:100%;
+  height:200px;
+}
+
+.panel .article-title,
+.panel .article-text,
+.panel .article-date-author{
+  color:#656363;
+  margin:2px 0;
+  text-align: left;
+  font-weight:600;
+  font-size:14px;
+}
+
+.panel .article-text,
+.panel .article-date-author{
+  color:grey;
+  margin:10px 0;
+  font-size:12px;
+}
+
+.panel .article-date-author{
+  text-transform: uppercase;
+  opacity:0.7;
+}
+
+/* Dropdown CSS */
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-title,
+.dropdown .selection{
+  display:inline-block;
+  padding:0 5px;
+}
+
+.dropdown-title p {
+  font-size:14px;
+  margin:0;
+  color:grey;
+}
+
+.dropdown .selection,
+.dropdown .list {
+  font-size:14px;
+  font-weight:600;
+  color:grey;
+  border-radius: 3px;
+  border: 1px solid transparent;
+}
+
+.dropdown .selection:hover,
+.dropdown .list:hover{
+  cursor: pointer;
+}
+
+.dropdown .selection i {
+  margin-left:10px;
+}
+
+.dropdown .list{
+  position: absolute;
+  padding:0 5px;
+  border-radius: 3px;
+  color:#0097e6;
+  transition: 0.3s ease-in-out;
+}
+
+.dropdown .list:hover{
+  border:1px solid #c6c6c6;
+}
+
+.dropdown .list .item {
+  margin:5px 0;
+  padding-right:22px;
+}
+
+/* People you may know CSS */
+.people-you-know-title {
+  color:grey;
+  font-size:12px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.people-you-may-know-list {
+  padding:20px 0;
+}
+
+.people-you-may-know-list .people .small-image,
+.people-you-may-know-list .people .information {
+  float:left;
+}
+
+.people-you-may-know-list .people .small-image{
+  float:left;
+}
+
+.people-you-may-know-list .people{
+  margin:20px 0;
+}
+
+.people-you-may-know-list .people .information {
+  color:#0097e6;
+  font-size:12px;
+  text-decoration: none;
+  margin-left:20px;
+  text-align:left;
+}
+
+.people-you-may-know-list .people .information .name{
+  color:#0097e6;
+  font-size:12px;
+  text-decoration: none;
+  margin:0;
+  text-align: left;
+  font-weight:600;
+}
+
+.people-you-may-know-list .people .information .name:hover{
+  color:#0097e6;
+  font-size:12px;
+  text-decoration: underline;
+}
+
+.people-you-may-know-list .people .information .role{
+  color:grey;
+  font-size:10px;
+  margin:0;
+}
+
+.mutual-connections,
+.mutual-connections i {
+  font-size:10px;
+  color:grey;
+  text-align: right;
+} 
+
+.mutual-connections {
+  padding:10px;
+}
+
+.mutual-connections i {
+  margin:0 4px;
+}
+
+/* Search Control CSS */
+
+.search-control{
+  width:100%;
+  position: relative;
+}
+
+.search-control i {
+  color:grey;
+  padding:5px;
+  margin:0 5px;
+}
+
+
+
+.search-control .icon,
+.search-control input {
+  display:inline-block;
+}
+
+.search-control input {
+  border:none;
+  outline: none;
+  background:transparent;
+  width:300px;
+  color:grey;
+  font-weight:600;
+  caret-color: grey;
+}
+
+.search-control input::placeholder{
+  color:grey;
+  font-weight:600;
+  opacity:0.6;
+}
+
+.search-control .results {
+  width:100%;
+  position: absolute;
+}
+
+
+.search-control .results a {
+  display:flex;
+  width:100%;
+  color:#0097e6;
+  text-decoration: none;
+  justify-content: center;
+}
+
+
+
+.search-control .results .result img,
+.search-control .results .result p{
+  text-align: left;
+  float:left;
+}
+
+.search-control .results .result img {
+  margin:10px;
+}
+
+.search-control .results .result p{
+  color:#0097e6;
+}
