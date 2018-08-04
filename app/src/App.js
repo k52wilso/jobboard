@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Dropdown from './components/common/Dropdown';
-import SearchControl from './components/common/SearchControl';
+import Main from './components/Main';
+import Modal from './components/Modal';
 
 class App extends Component {
 
@@ -10,7 +10,10 @@ class App extends Component {
     possibleConnections:[],
     placeHolderText:'',
     results:[],
-    searchValue:''
+    searchValue:'',
+    showModal:false,
+    modalType:'',
+    content:null
   }
 
   constructor(){
@@ -18,49 +21,11 @@ class App extends Component {
 
     this.changeSelection = this.changeSelection.bind(this);
     this.onSearchChange = this.onSearchChange.bind(this);
+    this.showModal = this.showModal.bind(this);
   }
 
   componentDidMount(){
-    // this.setState({
-    //   currentSelection:{display:'Popular',value:'popular'},
-    //   dropdown:[
-    //     {display:'Popular',value:'popular'},
-    //     {display:'Newest',value:'new'},              
-    //   ]
-    // });
-    // this.setState({
-    //   possibleConnections:[{
-    //     name:'Sara Jenkins',
-    //     jobRole:'UX Designer',
-    //     photoURL:'./assets/images/girl.jpg',
-    //     numberOfMutualConnections:11
-    //   },{
-    //     name:'Daryl Johnson',
-    //     jobRole:'Full Stack Developer',
-    //     photoURL:'./assets/images/guy.jpg',
-    //     numberOfMutualConnections:10
-    //   }]
-    // });
-
-    this.setState({
-      results:[{
-        type:'person',
-        name:'Sara Jenkins',
-        photoURL:'./assets/images/girl.jpg',
-      },{
-        type:'person',
-        name:'Daryl Johnson',
-        photoURL:'./assets/images/guy.jpg',
-      },{
-        type:'company',
-        name:'Johnson & Johnson',
-        photoURL:'./assets/images/johnson.jpg'
-      }]
-    });
     
-    this.setState({
-      placeHolderText:'Search for people, jobs, companies and more...'
-    })
   }
 
 
@@ -77,15 +42,22 @@ class App extends Component {
     })
   }
 
+  showModal(TYPE,content){
+    this.setState({
+      showModal:!this.state.showModal,
+      modalType:TYPE ? TYPE : '',
+      content:content ? content : null
+    })
+  }
+
   render() {
 
-    const { results, placeHolderText, searchValue } = this.state;
+    const { showModal , modalType, content} = this.state;
     
     return (
       <div className="App">
-        <div className="col-4">
-          <SearchControl value={searchValue} results={results} placeholder={placeHolderText} onChange={this.onSearchChange}/>
-        </div>
+        <Modal modalShow={showModal} modalType={modalType} content={content} show={this.showModal}/>
+        <Main showModal={this.showModal} />
       </div>
     );
   }

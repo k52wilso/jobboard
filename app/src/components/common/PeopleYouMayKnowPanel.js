@@ -19,14 +19,14 @@ class PeopleYouMayKnowPanel extends Component {
     const { connections } = this.props;
     
     return (
-        <div className="panel col-3">
+        <div className="panel m-40-y">
           <h3 className="people-you-know-title">PEOPLE YOU MAY KNOW</h3>
           <hr/>
           <div className="people-you-may-know-list">
             {
                 connections.map((connection) => {
                     return (
-                        <div className="people">
+                        <div className="people" key={connection.name}>
                             <img className="small-image" src={connection.photoURL} alt={connection.name}/>
                             <div className="information">
                                 <a className="name" href="#">{connection.name}</a>

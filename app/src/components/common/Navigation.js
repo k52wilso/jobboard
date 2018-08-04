@@ -14,20 +14,14 @@ class Navigation extends Component {
       this._activateLink = this._activateLink.bind(this);
   }
 
-  componentDidMount(){
-      this.setState({
-          links:[
-            {id:1,name:"People"},
-            {id:2,name:"Posts"},
-            {id:3,name:"Location"},
-            {id:4,name:"Groups"},
-            {id:5,name:"Inbox"},
-            {id:6,name:"Jobs"},
-          ]
-      });
-  }
+ componentDidMount(){
+     this.setState({
+         selectedLink:this.props.selectedLink
+     })
+ }
 
   _activateLink(id,e){
+    console.log(id);
     this.setState({
         selectedLink:id
     })
@@ -35,12 +29,13 @@ class Navigation extends Component {
    
 
   render() {
-        const { links, selectedLink } = this.state;
+    const { links } = this.props;
+    const { selectedLink } = this.state;
     return (
         <ul className="navigation-links">
             {
                 links.map((link) => 
-                    <li className={selectedLink === link.id ? 'active' : ''} key={link.id} onClick={this._activateLink.bind(this,link.id)}><a><i className="fas fa-arrow-right"></i>{link.name}</a></li>
+                    <li className={selectedLink === link.id ? 'active' : ''} key={link.id} onClick={this._activateLink.bind(this,link.id)}><a>{link.icon ? link.icon : null}{link.name}</a></li>
                 )
             }
         </ul>

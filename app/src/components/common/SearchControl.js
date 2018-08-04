@@ -25,7 +25,7 @@ class SearchControl extends Component {
           <div className="results">
             {
                 results.map((result) => {
-                    if(value !== '' && result.name.includes(value)){
+                    if(value !== '' && result.name.toLowerCase().includes(value.toLowerCase())){
                         return (
                             <a href="#" key={result.name}>
                                 <div className="result">

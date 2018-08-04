@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  padding:30px;
 }
 
 .App-logo {
@@ -33,50 +32,62 @@
 
 .col-12{
   width:100%;
+  float:left;
 }
 
 .col-11 {
   width:91.6666%;
+  float:left;
 }
 
 .col-10 {
   width:83.3333%;
+  float:left;
 }
 
 .col-9 {
   width:75%;
+  float:left;
 }
 
 .col-8 {
   width:66.6666%;
+  float:left;
 }
 
 .col-7 {
   width:58.3333%;
+  float:left;
 }
 
 .col-6 {
   width:50%;
+  float:left;
 }
 
 .col-5{
   width:41.6665%;
+  float:left;
 }
 
 .col-4 {
   width:33.3333%;
+  float:left;
 }
 
 .col-3 {
   width:25%;
+  float:left;
 }
 
 .col-2 {
   width:16.6666%;
+  float:left;
 }
 
 .col-1 {
   width:8.3333%;
+  float:left;
 }
 
 
@@ -95,7 +106,7 @@ button {
   padding:15px 20px;
   color:white;
   border:none;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 5px;
   outline:none;
 }
 
@@ -119,7 +130,8 @@ button:hover{
   color:white;
   border-radius: 50%;
   text-shadow: 2px 2px 1px #c6c6c6;
-  box-shadow: 2px 2px 2px #c6c6c6
+  box-shadow: 2px 2px 2px #c6c6c6;
+  font-weight:normal; 
 }
 
 .yellow-badge{
@@ -140,6 +152,25 @@ button:hover{
   height:auto;
 }
 
+.user-area{
+  width:100%;
+  padding:15px 35px;
+  text-align: left;
+}
+
+.user-area .likes,
+.user-area .comments{
+  color:grey;
+  font-size:10px;
+  margin:0 5px;
+}
+
+.user-area .likes:hover,
+.user-area .comments:hover{
+  color:#0097e6;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 .large-image{
   width:50px;
@@ -155,6 +186,9 @@ button:hover{
   box-shadow: 2px 2px 2px #c6c6c6;
 }
 
+.small-image:hover{
+  cursor:pointer;
+}
 
 /* Navigation List CSS */
 
@@ -170,38 +204,44 @@ button:hover{
   height:auto;
   transition: 0.3s ease-in-out;
   margin:5px 0;
-  padding:10px 60px;
+  padding:10px 50px;
   border-radius:30px;
 }
 
 .navigation-links a {
-  color:#c6c6c6;
+  color:#a7a7a7;
   font-size:14px;
   font-weight:600;
   text-align: left;
   display:block;
 }
 
-.active,
+.navigation-links .active,
 .navigation-links li:hover{
   background-color: #0097e6;
   cursor: pointer;
-}
-
-.active {
-  box-shadow: 2px 2px 2px #c6c6c6;
-}
-
-.active a {
   color:white;
 }
 
-.active a i {
+.navigation-links li:hover a,
+.navigation-links li:hover i {
+  color:white;
+}
+
+.navigation-links .active {
+  box-shadow: 2px 2px 2px #c6c6c6;
+}
+
+.navigation-links .active a {
+  color:white;
+}
+
+.navigation-links .active a i {
   color:white;
 }
 
 .navigation-links i {
-  color:#c6c6c6;
+  color:#a7a7a7;
   font-size:16px;
   margin-right:10px;
   text-align: left;
@@ -210,13 +250,13 @@ button:hover{
 /* Panel CSS */
 .panel {
   position:relative;
-  box-shadow: 2px 2px 20px #c6c6c6,
-              -2px 2px 20px #c6c6c6,
-              -2px 0px 20px #c6c6c6;
+  box-shadow: 2px 3px 10px 0px #dfdada, 
+              -2px 2px 10px 0px #c6c6c6;
   padding:10px;
   height:auto;
   float:left;
   border-radius: 3px;
+  width:100%;
 }
 
 .panel .userProfile {
@@ -274,7 +314,7 @@ button:hover{
 
 .comments {
   width:100%;
-  margin-top:40px;
+  padding:60px 0 0 0;
 }
 
 .comment {
@@ -309,6 +349,71 @@ button:hover{
   color:grey;
   text-align: left;
   line-height: 1.5;
+}
+
+.comment-box {
+  padding:0 5%;
+  width:90%;
+  float:left;
+}
+
+.comment-box textarea {
+  width:100%;
+  color:grey;
+  font-weight:600;
+  font-size:10px;
+  resize: none;
+}
+
+.comment-box button {
+  padding:10px 20px;
+  color:white;
+  background-color:#0097e6;
+  font-size:10px;
+  font-weight:600;
+  float:right;
+  outline:none;
+  border:none;
+  border-radius: 3px;
+}
+
+.comments .load-more {
+  color:#0097e6;
+  font-size:10px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.load-more:hover {
+  text-decoration: underline;
+  cursor:pointer;
+}
+
+/* Options in UserPanel CSS */
+.userpanel-options {
+  float:left;
+  display:flex;
+  justify-content: center;
+  padding:5px 5%;
+}
+
+.userpanel-options i {
+  color:grey;
+  padding-right:5px;
+}
+
+.userpanel-options .heart {
+  color:#e74c3c;
+}
+
+.userpanel-options button {
+  border:none;
+  background:transparent;
+  color:grey;
+  font-size:12px;
+  font-weight:600;
+  margin-right:15px;
+  outline:none;
 }
 
 /* Reply Button CSS */
@@ -493,8 +598,8 @@ button:hover{
 /* Search Control CSS */
 
 .search-control{
-  width:100%;
   position: relative;
+  float:left;
 }
 
 .search-control i {
@@ -529,6 +634,8 @@ button:hover{
 .search-control .results {
   width:100%;
   position: absolute;
+  background-color:white;
+  z-index: 10;
 }
 
 
@@ -538,6 +645,7 @@ button:hover{
   color:#0097e6;
   text-decoration: none;
   justify-content: center;
+  border-top:1px solid #e6e6e6;
 }
 
 
@@ -554,4 +662,211 @@ button:hover{
 
 .search-control .results .result p{
   color:#0097e6;
+}
+
+/* Share Panel CSS */
+
+.share-panel{
+  width:100%;
+}
+
+.share-panel .active {
+  font-weight:700;
+  color:#0097e6;
+}
+
+.share-panel ul {
+  display:flex;
+  justify-content: center;
+  list-style: none;
+  margin:20px 0;
+  padding:10px 0;
+}
+
+.share-panel ul li {
+  color:grey;
+  font-size:12px;
+  font-weight:600;
+  padding:0 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.share-panel ul li:hover{
+  color:#0097e6;
+  cursor:pointer;
+}
+
+.share-panel ul li span {
+  margin-right:7px;
+}
+
+.share-panel .panel {
+  width:100%;
+  padding:0;
+}
+
+.share-panel .panel textarea {
+  width:96%;
+  outline:none;
+  color:grey;
+  caret-color: grey;
+  border-radius:3px;
+  padding:15px 2% 0 2%;
+  resize: none;
+  font-size:11px;
+  border:none;
+  min-height:70px;
+}
+
+.share-panel .panel textarea::placeholder {
+  color:grey;
+  font-size:11px;
+  font-weight: 600;
+}
+
+.share-panel .panel .buttons .post-button {
+  float:right;
+  font-weight:600;
+  font-size:12px;
+}
+
+.share-panel .panel .buttons {
+  background-color:white;
+}
+
+.share-panel .panel .buttons span {
+  font-size:14px;
+  color:grey;
+  padding:12px 10px;
+  float:left;
+}
+
+.share-panel .panel .buttons span:hover {
+  color:#4d4d4d;
+  cursor:pointer;
+}
+
+.share-panel .uploads {
+  width:100%;
+  background-color:white;
+}
+
+.share-panel .uploads .upload:hover {
+  cursor:pointer;
+}
+
+.share-panel .uploads .upload {
+  width:50%;
+  float:left;
+  padding:10px 0;
+}
+
+.share-panel .uploads .upload:hover p,
+.share-panel .uploads .upload:hover i {
+  color:#4d4d4d;
+}
+
+.panel .upload p,
+.panel .upload i {
+  color:grey;
+} 
+
+/* Main CSS */
+
+.header {
+  width:95%;
+  height:45px;
+  background-color:white;
+  padding:15px 2.5% 0 2.5%;
+  border-bottom:1px solid #e6e6e6
+}
+
+.header .logo-div{
+  height:100%;
+  float:left;
+}
+
+.header .logo-div img {
+  width:40px;
+  height:30px;
+  float:left;
+}
+
+
+
+.header .notification{
+  padding:6px 9px;
+  background-color:#0097e6;
+  color:white;
+  border-radius: 50%;
+  font-size:10px;
+  float:right;
+  margin:5px 12px;
+}
+
+.header .notification:hover {
+  cursor: pointer;
+}
+
+.header .notifications .small-image {
+  float:right;
+}
+
+.side-bar{
+  padding:20px 0;
+  height:auto;
+  background-color:white;
+}
+
+.other-links {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+  height: auto;
+  display: inline-block;
+}
+
+.other-links li {
+  height:auto;
+  transition: 0.3s ease-in-out;
+  margin:5px 0;
+  padding:10px 50px;
+  border-radius:30px;
+}
+
+.other-links a {
+  color:#a7a7a7;
+  font-size:14px;
+  font-weight:600;
+  text-align: left;
+  display:block;
+}
+
+.other-links li:hover{
+  cursor: pointer;
+}
+
+.chart-area {
+  padding:20px;
+}
+
+.chart-text {
+  padding:20px;
+  text-align: left;
+  font-weight:600;
+}
+
+.chart-text p {
+  color:#a7a7a7;
+  font-size:12px;
+}
+
+.chart-text a {
+  color:#0097e6;
+  text-decoration: none;
+  font-size:10px;
+}
+
+.main-area {
+  padding:20px 0;
 }

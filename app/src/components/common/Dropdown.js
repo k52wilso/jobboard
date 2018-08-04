@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 class Dropdown extends Component {
 
@@ -38,7 +37,7 @@ class Dropdown extends Component {
                 </div>
                 {isOpen && <div className="list">
                     {data.map((item) => {
-                        if(currentSelection.display != item.display){
+                        if(currentSelection.display !== item.display){
                             return (
                                 <div className="item" key={item.value} onClick={this.changeDropdown.bind(this,item)} >{item.display}</div>
                             )
